@@ -5,9 +5,7 @@ import { api } from '@/data/api';
 import { Product } from '@/data/types/product';
 import { redirect } from 'next/navigation';
 interface SearchProps {
-  searchParams: {
-    q: string;
-  };
+  searchParams: Promise<{ q: string }>;
 }
 
 async function searchProducts(query: string): Promise<Product[]> {
@@ -23,18 +21,18 @@ async function searchProducts(query: string): Promise<Product[]> {
 }
 
 export default async function Search({ searchParams }: SearchProps) {
-  const query = (await searchParams).q;
+  const { q } = await searchParams;
 
-  if (!query) {
+  if (!q) {
     redirect('/');
   }
 
-  const products = await searchProducts(query);
+  const products = await searchProducts(q);
 
   return (
     <div className="flex flex-col gap-4">
       <p className="text-sm">
-        Resultados para: <span className="font-semibold">{query}</span>
+        Resultados para: <span className="font-semibold">{q}</span>
       </p>
       <div className="grid grid-cols-3 gap-6">
         {products.map((product) => (
