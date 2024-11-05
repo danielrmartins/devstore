@@ -1,6 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript", "@rocketseat/eslint-config/next"],
   "rules": {
+    "@typescript-eslint/no-namespace": "off",
     "prettier/prettier": ["error", {
       "printWidth": 180,
       "singleQuote": true
