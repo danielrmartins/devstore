@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# devstore
 
-First, run the development server:
+Este repositório contém o código do devstore, um projeto de e-commerce usando o Next.js com Server Components. O projeto terá funcionalidades básicas, como listagem de produtos, carrinho e busca.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 Objetivo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+Aprendizado com as novas tecnologias do Next.js
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🚀 Tecnologias Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Frontend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js:** Framework React para renderização do lado do servidor e geração de sites estáticos.
+- **React:** Biblioteca JavaScript para construção de interfaces.
+- **Lucide React:** Biblioteca de ícones leves e modernos.
+- **Tailwind CSS:** Framework CSS para estilização rápida e responsiva.
+- **Tailwind Merge:** Utilitário para combinar classes Tailwind sem conflito.
+- **Zod:** Biblioteca de validação de dados para garantir a segurança e a integridade das informações.
+
+### Configuração e Ambiente
+
+- **@t3-oss/env-nextjs:** Gerenciamento de variáveis de ambiente no Next.js.
+
+### Desenvolvimento e Qualidade de Código
+
+- **ESLint e @rocketseat/eslint-config:** Linter para assegurar a qualidade do código.
+- **TypeScript:** Superset do JavaScript para adicionar tipagem estática ao projeto.
+
+### Testes
+
+- **Cypress:** Framework de testes end-to-end para garantir a confiabilidade do sistema.
+
+## 🔧 Instalação e Configuração
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/danielrmartins/devstore.git
+```
+
+2. Instale as dependências:
+
+```bash
+cd devstore
+npm install
+```
+
+3. Configure as variáveis de ambiente:
+
+- Crie o arquivo .env.local
+- Adicione as variáveis de ambiente 
+
+```bash
+APP_URL="http://localhost:3000"
+NEXT_PUBLIC_API_BASE_URL="https://devstore-api-navy.vercel.app/"
+
+ou 
+
+NEXT_PUBLIC_API_BASE_URL="http://localhost:3000"
+```
+
+4. Execute o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
+
